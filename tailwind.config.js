@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     width: {
-      w220: "18%", // Define a custom width value
+      v100vw: "100vw",
       w82p: "82%",
       w100p: "100%",
       w26: "26px",
@@ -9,18 +9,18 @@ module.exports = {
       w118: "118px",
     },
     height: {
+      h100vh: "100vh",
+      h93vh: "93vh",
       h118: "118px",
       h15: "15px",
       h20: "20px",
       h26: "26px",
       h30: "30px",
       h48: "48px",
-      h45: "45px",
+      h60: "45px",
+      h60: "60px",
     },
-
     margin: {
-     
-      mauto: "auto",
       m10: "10px",
       m4: "4px",
       m8: "8px",
@@ -58,6 +58,7 @@ module.exports = {
       grey_bg2:"#F8F8F8",
       dark_yellow: "#99CA3B",
       sky_blue: "#2680EB",
+      bg_black:"#313136",
       text_black: "#404040",
     },
   },
@@ -66,6 +67,5 @@ module.exports = {
     "./src/**/*.html",
     "./src/**/*.js",
     "./src/**/*.jsx",
-    // Add any other files that contain your HTML/JSX templates.
   ],
 };

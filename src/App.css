@@ -1,7 +1,6 @@
-/* Hide scrollbar indicators for WebKit (Chrome and Safari) */
 ::-webkit-scrollbar {
-  width: 0.5rem; /* Set a small width for the scrollbar track */
-  height: 0.5rem; /* Set a small height for the scrollbar track */
+  width: 0rem; 
+  height: 0rem; 
 }
 
 ::-webkit-scrollbar-thumb {

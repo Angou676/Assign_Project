@@ -1,48 +1,18 @@
 import React from "react";
-import dashboard from "../../../images/dashboard.png";
-import job from "../../../images/Jobs_Outline.png";
-import applicant from "../../../images/profiles.png";
+import navigateData from "../../../data";
 
 const HorizonatlNav = () => {
-  const sideHeader = [
-    {
-      icon: dashboard,
-      text: "Dashboard",
-    },
-    {
-      icon: job,
-      text: "Jobs",
-    },
-    {
-      icon: applicant,
-      text: "Applications",
-    },
-    {
-      icon: job,
-      text: "Jobs",
-    },
-    {
-      icon: applicant,
-      text: "Applications",
-    },
-    {
-      icon: applicant,
-      text: "Applications",
-    },
-    {
-      icon: job,
-      text: "Jobs",
-    },
-    {
-      icon: applicant,
-      text: "Applications",
-    },
-  ];
-
   return (
-    <div className=" flex md-sm:hidden overflow-x-auto whitespace-no-wrap scrollbar shadow sm:shadow-md ">
-      {sideHeader.map((val, idx) => {
-        return <span className="m-m8 text-fs10 text-grey">{val.text}</span>;
+    <div className="flex md-sm:hidden overflow-x-auto scrollbar shadow sm:shadow-md">
+      {navigateData.map((val, idx) => {
+        return (
+          <div
+            key={idx}
+            className="m-m8 text-fs10 text-grey whitespace-nowrap  max-w-max"
+          >
+           {val.text} <span className="ml-m10">|</span>
+          </div>  
+        );
       })}
     </div>
   );
