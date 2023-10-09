@@ -1,38 +1,19 @@
-.App {
-  text-align: center;
+/* Hide scrollbar indicators for WebKit (Chrome and Safari) */
+::-webkit-scrollbar {
+  width: 0.5rem; /* Set a small width for the scrollbar track */
+  height: 0.5rem; /* Set a small height for the scrollbar track */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Hide the thumb */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Hide scrollbar indicators for Firefox */
+.scrollbar {
+  scrollbar-width: thin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.scrollbar::-webkit-scrollbar,
+.scrollbar::-webkit-scrollbar-thumb {
+  display: none; /* Hide scrollbar and thumb */
 }
