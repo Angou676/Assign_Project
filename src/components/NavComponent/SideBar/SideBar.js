@@ -3,15 +3,16 @@ import hplogo from "../../../images/hplogo.png";
 import logo from "../../../images/JFH_Start-Restart-Rise.png";
 import menuClose from "../../../images/menulong.png";
 import dashboard from "../../../images/dashboard.png";
-import job from "../../../images/Jobs_Outline.png";
-import applicant from "../../../images/profiles.png";
-
 import navigateData from "../../../data";
 
 const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
- 
 
-  console.log(isDrawerOpen);
+  const [select, setSelect] = useState(0)
+
+  const navHandler = (heading,getId) =>{
+    console.log(getId)
+    setSelect(getId)
+  }
   return (
     <>
       <div
@@ -42,20 +43,19 @@ const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
         <section className="p-0">
           {navigateData.map((item, idx) => {
             return (
-              <div className="flex items-center mb-m10 p-2 px-4 ">
+              <div className={`${idx===select ? "bg-bg_black border-l-4 border-dark_yellow text-dark_yellow" : null} flex items-center mb-m10 p-2 px-4 `}
+              onClick={()=>navHandler(item.text, idx)}
+              >
                 <img src={item.icon} className="h-h26" />
-                <h5 className="text-fs16 ml-m10 text-grey">{item.text}</h5>
+                <h5 className="text-fs16 ml-m10 ">{item.text}</h5>
               </div>
             );
           })}
+        </section>
 
-          <div
-            className="flex items-center mb-m10  p-2 px-4 bg-bg_black border-l-4 border-dark_yellow"
-            // style={{ border: "1px solid red" }}
-          >
-            <img src={dashboard} className="h-h26" />
-            <h5 className="text-fs16 ml-m10 text-dark_yellow">jguygu</h5>
-          </div>
+        <section className="fixed bottom-0 left-0 p-4">
+          <h5 className="text-fs14 text-dark_yellow">Contact Us-</h5>
+          <div className="text-fs12 text-dark_yellow">admin@jobsforher.com</div>
         </section>
       </div>
     </>

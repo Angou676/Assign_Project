@@ -1,14 +1,26 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import Header from "./components/NavComponent/Header/Header";
 import Dashboard from "./pages/Dashboard";
-import Trial from "./Trial";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Packages from "./pages/Packages";
+import Events from "./pages/Events";
+import Blogs from './pages/Blogs';
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
-      {/* <Trial/> */}
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Dashboard/>} />
+          <Route path="/pack" exact element={<Packages/>} />
+          <Route path="/event" exact element={<Events/>} />
+          <Route path="/blogs" exact element={<Blogs/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
