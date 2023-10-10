@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import hplogo from "../../../images/hplogo.png";
 import logo from "../../../images/JFH_Start-Restart-Rise.png";
 import menuClose from "../../../images/menulong.png";
-import dashboard from "../../../images/dashboard.png";
 import navigateData from "../../../data";
+import { useDispatch } from "react-redux";
+import { actions } from "../../../store";
 
 const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
-
-  const [select, setSelect] = useState(0)
-
-  const navHandler = (heading,getId) =>{
-    console.log(getId)
-    setSelect(getId)
-  }
+  const dispatch = useDispatch();
+  const [select, setSelect] = useState(0);
+  const navHandler = (heading, getId) => {
+    setSelect(getId);
+    dispatch(
+      actions.setSelectHeading({
+        items: heading,
+      })
+    );
+  };
   return (
     <>
       <div
@@ -31,7 +35,6 @@ const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
             className="h-h26 cursor-pointer"
           />
         </section>
-
         <section className="p-4">
           <div className="flex items-center">
             <img src={hplogo} className="h-h48 rounded-full" />
@@ -39,12 +42,17 @@ const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
           </div>
           <div className="text-fs16 text-white">Hewlett Packard E...</div>
         </section>
-
         <section className="p-0">
           {navigateData.map((item, idx) => {
             return (
-              <div className={`${idx===select ? "bg-bg_black border-l-4 border-dark_yellow text-dark_yellow" : null} flex items-center mb-m10 p-2 px-4 `}
-              onClick={()=>navHandler(item.text, idx)}
+              <div
+                key={idx}
+                className={`${
+                  idx === select
+                    ? "bg-bg_black border-l-4 border-dark_yellow text-dark_yellow"
+                    : null
+                } flex items-center mb-m10 p-2 px-4 `}
+                onClick={() => navHandler(item.text, idx)}
               >
                 <img src={item.icon} className="h-h26" />
                 <h5 className="text-fs16 ml-m10 ">{item.text}</h5>
@@ -52,7 +60,6 @@ const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
             );
           })}
         </section>
-
         <section className="fixed bottom-0 left-0 p-4">
           <h5 className="text-fs14 text-dark_yellow">Contact Us-</h5>
           <div className="text-fs12 text-dark_yellow">admin@jobsforher.com</div>
