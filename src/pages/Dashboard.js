@@ -8,6 +8,7 @@ const Dashboard = () => {
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
+
   return (
     <section className="flex h-h100vh w-w100p fixed top-0 left-0 right-0">
       <SideBar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />

@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../../images/JFH_Start-Restart-Rise.png";
 import forever21 from "../../../images/Image 324.png";
 import HorizonatlNav from "../HorizonatlNav/HorizonatlNav";
 import { useNavigate } from 'react-router-dom';
@@ -51,7 +50,7 @@ const Header = ({ isDrawerOpen, toggleDrawer }) => {
         </nav>
 
         {isDrawerOpen ? null : (
-          <img src={logo} className="h-h26 flex sm:hidden" />
+          <h1 className="h-h26 flex sm:hidden" style={{fontWeight:900}}>My Logo</h1>
         )}
 
         <img src={forever21} className="h-h26 w-w26 rounded-br50p  cursor-pointer"/>

@@ -1,6 +1,5 @@
 import React from "react";
 import backarrow from "../../images/go-back-left-arrow.png";
-import profileImg from "../../images/Image 292.png";
 import editIcon from "../../images/edit.png";
 import { useSelector } from "react-redux";
 
@@ -28,15 +27,15 @@ const Profile = ({ isDrawerOpen }) => {
                 </div>
                 <div className="flex py-3 px-2">
                   <img
-                    src={profileImg}
+                    src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_1280.png"
                     className="h-h118  w-w118 rounded-br50p object-center"
                   />
                   <div className="ml-m20">
-                    <h1 className="text-fs22 ">Divya Chatterjee</h1>
+                    <h1 className="text-fs22 ">Angou Longjam</h1>
                     <div className="text-fs12 text-grey_subtext mt-m8">
                       Designation
                     </div>
-                    <h4 className="text-fs14 mt-mn5">Assistant Manager - HR</h4>
+                    <h4 className="text-fs14 mt-mn5">Software Engineer</h4>
                     <div className="text-fs12 text-grey_subtext mt-m8">
                       Company Name
                     </div>
@@ -83,7 +82,7 @@ const Profile = ({ isDrawerOpen }) => {
                       <div className="text-fs12 text-grey_subtext mt-m8">
                         Phone / Landline*
                       </div>
-                      <h4 className="text-fs14 ">0976575432</h4>
+                      <h4 className="text-fs14 ">7005099676</h4>
                     </div>
 
                     <h4 className="text-fs14 text-sky_blue mt-m20 cursor-pointer">

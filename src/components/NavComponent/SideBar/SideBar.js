@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import hplogo from "../../../images/hplogo.png";
-import logo from "../../../images/JFH_Start-Restart-Rise.png";
 import menuClose from "../../../images/menulong.png";
 import navigateData from "../../../data";
 import { useDispatch } from "react-redux";
@@ -28,7 +27,7 @@ const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
           } w-w220  bg-dark_grey inset-y-0 h-h100vh `}
       >
         <section className="w-w220 flex justify-between items-center p-4 bg-white h-h60 border-b border-grey_light">
-          <img src={logo} className="h-h26 cursor-pointer" />
+          <h1 style={{fontWeight:900}}>My LOGO</h1>
           <img
             src={menuClose}
             onClick={toggleDrawer}
@@ -62,7 +61,7 @@ const SideBar = ({ isDrawerOpen, toggleDrawer }) => {
         </section>
         <section className="fixed bottom-0 left-0 p-4">
           <h5 className="text-fs14 text-dark_yellow">Contact Us-</h5>
-          <div className="text-fs12 text-dark_yellow">admin@jobsforher.com</div>
+          <div className="text-fs12 text-dark_yellow">agpblj@gmail.com</div>
         </section>
       </div>
     </>
